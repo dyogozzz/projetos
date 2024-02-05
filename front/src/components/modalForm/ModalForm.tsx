@@ -4,31 +4,31 @@ import { useState } from 'react'
 import User from '../../Interfaces/User'
 
 interface IModalForm {
-    isOpen: boolean,
-    user?: User,
-    setIsOpen: (arg: boolean) => void
-    editUser: (arg: User | undefined) => void,
-    clickSave : (arg: User) => void
+  isOpen: boolean,
+  user?: User,
+  setIsOpen: (arg: boolean) => void
+  editUser: (arg: User | undefined) => void,
+  clickSave : (arg: User) => void
 }
 
 const ModalForm = (props: IModalForm) => {
 
-    const closeModal = () => {
-        props.editUser(undefined)
-        props.setIsOpen(false)
-    }
+  const closeModal = () => {
+    props.editUser(undefined)
+    props.setIsOpen(false)
+  }
 
-    if(props.isOpen){
-        return (
-            <Modal clickClose={closeModal} >
-                <Form clickSave={props.clickSave} user={props.user} clickCancel={closeModal}>
+  if(props.isOpen){
+    return (
+      <Modal clickClose={closeModal} >
+        <Form clickSave={props.clickSave} user={props.user} clickCancel={closeModal}>
 
-                </Form>
-            </Modal>
-        )
-    }
+        </Form>
+      </Modal>
+    )
+  }
 
-    return null
+  return null
 }
 
 export default ModalForm
