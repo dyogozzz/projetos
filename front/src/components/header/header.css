@@ -1,0 +1,14 @@
+.add-form {
+  display: flex;
+  margin-bottom: 50px;
+  gap: 15px;
+  width: 100%;
+}
+
+select {
+  max-width: 200px;
+}
+
+.input-date {
+  max-width: 200px;
+}

@@ -1,0 +1,12 @@
+.title {
+    display: flex;
+    justify-content: center;
+}
+
+.title h1 {
+    margin-bottom: 20px;
+}
+
+.campo {
+    margin-top: 1.6rem;
+}
